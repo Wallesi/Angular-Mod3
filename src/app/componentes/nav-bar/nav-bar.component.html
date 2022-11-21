@@ -23,40 +23,8 @@
                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                              Login
                            </button>
-
-                           <!-- Modal -->
-                           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top: 100px;">
-                             <div class="modal-dialog">
-                               <div class="modal-content">
-                                 <div class="modal-header bg-dark">
-                                   <h5 class="modal-title text-light" id="exampleModalLabel">Iniciar Sesion</h5>
-                                   <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
-                                 </div>
-                                 <div class="modal-body">
-                                   <form>
-                                     <div class="mb-3">
-                                       <label for="exampleInputEmail1" class="form-label">Email o Id</label>
-                                       <input type="ussername" class="form-control" id="usuario" aria-describedby="emailHelp">
-                                       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                                     </div>
-                                     <div class="mb-3">
-                                       <label for="exampleInputPassword1" class="form-label">Password</label>
-                                       <input type="password" class="form-control" id="contraseña">
-                                     </div>
-                                     <div class="mb-3 form-check">
-                                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                       <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                     </div>
-                                     <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                                   </form>
-                                 </div>
-                                 <div class="modal-footer">
-                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                   <input type="button" value="Log In" class="btn btn-primary" id="boton" onclick="login()">
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
+                           <app-login></app-login>
+                           <!-- Aca me voy al componente login para hacerlo mas limpio -->
                </form>
             </ul>
           </div>

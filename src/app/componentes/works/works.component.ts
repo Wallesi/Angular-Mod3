@@ -12,7 +12,6 @@ export class WorksComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe(data=>{
-      console.log(data);
       this.miWorks=data.proyectos;
     })
   }

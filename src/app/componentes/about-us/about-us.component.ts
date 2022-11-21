@@ -12,7 +12,7 @@ export class AboutUsComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe(data=>{
-      console.log(data);
+      
       this.miAboutUs=data;
     })
   }

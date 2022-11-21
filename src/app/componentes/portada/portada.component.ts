@@ -12,7 +12,6 @@ export class PortadaComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe(data=>{
-      console.log(data);
       this.miPortada=data.portada;
     })
   }
