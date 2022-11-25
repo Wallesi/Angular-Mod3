@@ -14,6 +14,9 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { WorksComponent } from './componentes/works/works.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { VistaLogeadoComponent } from './componentes/vista-logeado/vista-logeado.component';
+
+import { PrincipalComponent } from './componentes/principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { LoginComponent } from './componentes/login/login.component';
     SkillsComponent,
     WorksComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    VistaLogeadoComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,

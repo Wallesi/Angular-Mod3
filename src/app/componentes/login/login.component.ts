@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder,FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+
+import { ComunicarService } from 'src/app/servicios/comunicar.service';
+
 
 @Component({
   selector: 'app-login',
@@ -10,15 +13,21 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  public loginForm !: FormGroup;
+ 
 
-  constructor(private formBuilder: FormBuilder, private http:HttpClient, private router:Router) { }
+  public loginForm !: FormGroup;
+  public showPencil!: boolean;
+
+  constructor(private formBuilder: FormBuilder, private http:HttpClient, private router:Router, public comunicarComponentes:ComunicarService) {}
+
+  
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email:[''],
       password:['']
     });
+    
   }
 
   login(){
@@ -30,6 +39,10 @@ export class LoginComponent implements OnInit {
         if(user){
           alert("Funca el login");
           this.loginForm.reset();
+          this.comunicarComponentes.mostrarLapiz=true; //Lo seteo true;
+          console.log('Estamos parados en el login',this.comunicarComponentes.mostrarLapiz);
+          this.router.navigate(['visitante']);
+          
         }else{
           alert("No se encontro el usuario");
         }
@@ -37,5 +50,7 @@ export class LoginComponent implements OnInit {
         alert("Algo salio mal")
       })
   }
+  
+
 
 }

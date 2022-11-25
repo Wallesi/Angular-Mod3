@@ -17,15 +17,10 @@
               <li class="nav-item">
                 <a class="nav-link text-light" href="#proyectos">Proyectos</a>
               </li>
-
-              <form class="container-fluid justify-content-start">
-                <!-- Button trigger modal -->
-                           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                             Login
-                           </button>
-                           <app-login></app-login>
-                           <!-- Aca me voy al componente login para hacerlo mas limpio -->
-               </form>
+              <a *ngIf="showLogout" routerLink="/principal" type="button" class="btn btn-danger">
+                Logout
+              </a>
+              
             </ul>
           </div>
         </div>

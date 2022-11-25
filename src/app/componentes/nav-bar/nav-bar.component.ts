@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/servicios/auth.service';
+import { ComunicarService } from 'src/app/servicios/comunicar.service';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,12 +8,20 @@ import { AuthService } from 'src/app/servicios/auth.service';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
+  showLogout!: boolean;
+
+  constructor(public comunicarComponente:ComunicarService) {}
 
   
 
-  constructor(private authService:AuthService) { }
-
   ngOnInit(): void {
+
+    if(this.comunicarComponente.mostrarLapiz===true){
+      this.showLogout=true;
+    }
   }
+
+  
+  
 
 }
